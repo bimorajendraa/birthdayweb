@@ -1,0 +1,14 @@
+
+path {
+    fill: transparent;
+}
+  
+text {
+    fill: #FF9800;
+}
+
+.text{
+    background-color: #333;
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 34.5px;
+}

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+    <title>Happy Birthday -q(≧▽≦q)</title>
+</head>
+<body class="bg-orange-100">
+    <embed src="RR0ROIhSs5AM.128.mp3" AutoPlay loop hidden>
+    <header>
+        <div class="relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 fixed top-0 left-0 right-0 bg-orange-100">
+                <div class="flex justify-between items-center border-b-2 border-orange-500 py-6 md:justify-start md:space-x-10">
+                    <!--logo-->
+                    <div class="flex justify-start lg:w-0 lg:flex-1">
+                        <a href="#">
+                            <a href="#">
+                                <span class="sr-only">Workflow</span>
+                                <img class="pl-3 h-8 w-auto sm:h-10 sm:pl-6" src="images/Asset 37.svg" alt="">
+                            </a>
+                        </a>
+                    </div>
+                    <!--hidden button for mobile-->
+                    <div class="-mr-2 -my-2 md:hidden">
+                        <button type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-expanded="false">
+                            <span class="sr-only">Open menu</span>
+                            <!-- Heroicon name: outline/menu -->
+                            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                            </svg>
+                        </button>
+                    </div>
+                    <nav class="hidden md:flex items-center justify-end md:flex-1 lg:w-0 md:pr-6">
+                        <div class="relative">
+                            <div>
+                                <video autoplay muted loop id="audio1" src="images/RR0ROIhSs5AM.128.mp3" type="audio/mp3" style="width: 0; height: 0;">
+                                    Your browser does not support the <code>video</code> element.
+                                </video>
+                                <div class="inline-flex items-center text-base">
+                                    <button id="unmuteButton" type="button" class=" bg-grey-light hover:bg-grey text-grey-darkest font-bold py-2 px-4 rounded inline-flex items-center">
+                                        <img class="h-6" src="images/Music.svg" alt="">
+                                        <span style="color:#F97316">Music</span>
+                                    </button>
+                                    <script>
+                                        unmuteButton.addEventListener('click', function() 
+                                            { 
+                                                if ( audio1.muted == false)
+                                                {
+                                                    audio1.muted = true; 
+                                                } else {
+                                                    audio1.muted = false; 
+                                                }
+                                            });
+                                    </script>
+                                </div>
+                            </div>
+                        </div>
+                    </nav> 
+                </div>
+            </div>
+        </div>
+    </header>
+    <tbody>
+        <div class="max-w-7xl mx-auto pt-20">
+            <div class="flex justify-between items-center mt-14">
+                <div class="flex justify-start">
+                    <img class="pl-3 h-8 w-auto sm:h-24 sm:pl-6" src="images/Asset 17.svg" alt="">
+                </div>
+                <div class="flex justify-end">
+                    <img class="pr-3 h-8 w-auto sm:h-24 sm:pr-6" src="images/Asset 35.svg" alt="">
+                </div>
+            </div>
+            <div class="flex justify-center items-center">
+                <canvas id="canv" width="800" height="300"></canvas>  
+                <script>
+                  
+                        /*The window.onload function will run as 
+                        soon as the window loads in the browser */
+                        window.onload = function () {
+                  
+                            /* This method returns the html element that
+                                has the ID attribute with the specified
+                                value. */
+                            let canvas = document.getElementById("canv");
+                  
+                            /* This method returns a drawing context
+                                on the canvas, or null if the context
+                                identified is not supported. */
+                            let context = canvas.getContext("2d");
+                  
+                            /* It will change the style and appearance 
+                                of the text to make it look more geeky. */
+                            context.font = "80px Shrikhand";
+                            context.fillStyle = "#F97316";
+                            context.textAlign = "center";
+                  
+                            let string = "Happy Birthday";
+                  
+                            let angle = Math.PI * 0.6; // in radians
+                            let radius = 400;
+                  
+                  
+                            context.translate(370, 500);
+                            context.rotate(-1 * angle / 2);
+                  
+                            for (let i = 0; i < string.length; i++) {
+                  
+                                /* It is worth noting that we are not
+                                    rotating the text,here the whole
+                                    context is being rotated and
+                                    translated, and the letters are just
+                                    filled in it. */
+                                context.rotate(angle / string.length);
+                                context.save();
+                                context.translate(0, -1 * radius);
+                                context.fillText(string[i], 0, 0);
+                                context.restore();
+                            }
+                        };
+                </script>
+            </div>
+            <div class="flex justify-center items-center">
+                <h2 style="font-family: 'Shrikhand', cursive; font-size:70px; color:#F97316;">Ariesha Kaunia Sugiharto</h2>
+            </div>
+            <div class="flex justify-between items-center mt-14 pb-44">
+                <div class="flex justify-start">
+                    <img class="pl-3 h-8 w-auto sm:h-24 sm:pl-6" src="images/Asset 24.svg" alt="">
+                </div>
+                <div class="flex justify-end">
+                    <img class="pr-3 h-8 w-auto sm:h-24 sm:pr-6" src="images/Asset 38.svg" alt="">
+                </div>
+            </div>
+            <div class="flex justify-center items-center pb-16 pt-24">
+                <h2 style="font-family: 'Shrikhand', cursive; font-size:60px; color:#F97316;">What other people say on ariesha's 17th birthday?</h2>
+            </div>
+            <div class="grid grid-cols-2 gap-12 pb-20">
+                <!--Ucapan-->
+                <div class="bg-red-300 shadow rounded-xl p-4 xl:p-8">
+                    <img src="images/iconmonstr-quote-3.svg" aria-hidden="true" />
+                    <div class="pl-4 pt-4 flex items-start justify-between">
+                        <div class="mr-6">
+                            <p class="xl:text-xl xl:leading-loose text-gray-900">happy sweet seventeen ariesha!! ciee punya ktp hehe, smoga ariesha tambah cantik and keren. Wishing you all the great things in life ya sha!! semangat bikin slimenya, 2022 dukung sasha menjadi spammers. oke see u soon, ditunggu remake pancakenya ya #yoloswag</p>
+                            <p class="mt-4 text-base font-bold leading-none text-gray-800">Sarah Arista</p>
+                        </div>
+                        <img class="rounded-full w-auto h-20" src="images/Artboard 59.svg" alt="Display Avatar of Anna Smith" role="img" />
+                    </div>
+                </div>
+                <div class="bg-blue-300 shadow rounded-xl p-4 xl:p-8">
+                    <img src="images/iconmonstr-quote-3.svg" aria-hidden="true" />
+                    <div class="pl-4 pt-4 flex items-start justify-between">
+                        <div class="mr-6">
+                            <p class="xl:text-xl xl:leading-loose text-gray-900">Happy Birthday cantikk. Selamat 17 tahun hehe, semoga panjang umur sehat selalu dan semoga di umur yang ke 17 ini tidak cengeng dan ngambek ngambekan lagi. Semoga keterima di univ yang kamu mau jg!! pokoknya wish the best for u hehe ☆*:.｡. o(≧▽≦)o .｡.:*☆</p>
+                            <p class="mt-4 text-base font-bold leading-none text-gray-800">Bimo Rajendra</p>
+                        </div>
+                        <img class="rounded-full w-auto h-20" src="images/Artboard 1.svg" alt="Display Avatar of Anna Smith" role="img" />
+                    </div>
+                </div>
+                <div class="bg-blue-300 shadow rounded-xl p-4 xl:p-8">
+                    <img src="images/iconmonstr-quote-3.svg" aria-hidden="true" />
+                    <div class="pl-4 pt-4 flex items-start justify-between">
+                        <div class="mr-6">
+                            <p class="xl:text-xl xl:leading-loose text-gray-900">HAPPY BIRTHDAY BERR!!! may all the happiness n blessings come to u yaa, pokoknya best wishes for ur bday!! oiya semoga makin baik and pinter lagii, biar gw bisa minta kj heheheh🎊✨🎇🥳🏳️‍🌈</p>
+                            <p class="mt-4 text-base font-bold leading-none text-gray-800">Fahmi Idrus</p>
+                        </div>
+                        <img class="rounded-full w-auto h-20" src="images/Artboard 41.svg" alt="Display Avatar of Anna Smith" role="img" />
+                    </div>
+                </div>
+                <div class="bg-red-300 shadow rounded-xl p-4 xl:p-8">
+                    <img src="images/iconmonstr-quote-3.svg" aria-hidden="true" />
+                    <div class="pl-4 pt-4 flex items-start justify-between">
+                        <div class="mr-6">
+                            <p class="xl:text-xl xl:leading-loose text-gray-900">Selamat ulang tahun kakak Ariesha semoga panjang umur sahat selalu jadi anak yang berbakti kepada orang tua dan jadi anak yang sholehah</p>
+                            <p class="mt-4 text-base font-bold leading-none text-gray-800">Adreena Larasati</p>
+                        </div>
+                        <img class="rounded-full w-auto h-20" src="images/Artboard 36.svg" alt="Display Avatar of Anna Smith" role="img" />
+                    </div>
+                </div>
+                <div class="bg-red-300 shadow rounded-xl p-4 xl:p-8">
+                    <img src="images/iconmonstr-quote-3.svg" aria-hidden="true" />
+                    <div class="pl-4 pt-4 flex items-start justify-between">
+                        <div class="mr-6">
+                            <p class="xl:text-xl xl:leading-loose text-gray-900">Happy legal day bestie!!! may ur new age will bring ur new happiness too</p>
+                            <p class="mt-4 text-base font-bold leading-none text-gray-800">Nesya</p>
+                        </div>
+                        <img class="rounded-full w-auto h-20" src="images/Artboard 56.svg" alt="Display Avatar of Anna Smith" role="img" />
+                    </div>
+                </div>
+                <div class="bg-blue-300 shadow rounded-xl p-4 xl:p-8">
+                    <img src="images/iconmonstr-quote-3.svg" aria-hidden="true" />
+                    <div class="pl-4 pt-4 flex items-start justify-between">
+                        <div class="mr-6">
+                            <p class="xl:text-xl xl:leading-loose text-gray-900">This website has a bunch of amazing components which improves my design</p>
+                            <p class="mt-4 text-base font-bold leading-none text-gray-800">Hanif Pohan</p>
+                        </div>
+                        <img class="rounded-full w-auto h-20" src="images/Artboard 52.svg" alt="Display Avatar of Anna Smith" role="img" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </tbody>
+    <footer>
+        <div class="flex justify-center items-center bg-orange-500 w-full h-44 ">
+            <p class="mt-4 text-base font-bold leading-none text-white">This website is dedicated to the person I love the most and the most beautiful person I've ever met</p>
+        </div>
+    </footer>
+</body>
+</html>
